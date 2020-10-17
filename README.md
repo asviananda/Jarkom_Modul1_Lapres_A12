@@ -78,10 +78,17 @@ Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"**
 **9. Cari username dan password ketika login FTP pada localhost!**
 
 Menggunakan ```ftp&&ftp.command == USER || ftp.request.command == PASS```
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96347202-5aef4300-10ca-11eb-868f-f4180098b66d.png"></p>
 
+display capture ```ftp``` digunakan karena protokol yang digunakan adalah FTP. Dan karena diminta username dan password, maka digunakan display capture ```ftp.command == USER || ftp.request.command == PASS```. Didapatlah hasil sesuai dengan gambar diatas.
 
 **10. Cari file .pdf di wireshark lalu download dan buka file tersebut!
 clue: "25 50 44 46"**
+
+Pertama, terdapat clue "25 50 44 46" yang merupakan ```hex value``` yang dapat dicari dengan ```CTRL+F``` search ```hex value 25 50 44 46```
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96347700-a48d5d00-10cd-11eb-92e6-9dbd85d4eed5.png"></p>
+
+
 
 
 **B. CAPTURE FILTER**
