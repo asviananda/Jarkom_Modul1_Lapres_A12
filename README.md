@@ -1,4 +1,4 @@
-# Jarkom_Modul1_Praktikum_A12
+# Jarkom_Modul1_Lapres_A12
 
 - Achmad Sofyan Pratama (05111840000061)
 - Oktarizka Asviananda Nursanty (05111840000156)
