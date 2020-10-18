@@ -75,6 +75,13 @@ Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"**
 
 **8. Cari objek apa saja yang didownload (RETR) dari koneksi FTP dengan Microsoft FTP Service!**
 
+Cari paket yang berasal dari koneksi FTP dengan Microsoft FTP Service menggunakan ```ftp contains "Microsoft"``` kemudian akan keluar hasil spt ini :
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96358833-c9b5b600-1135-11eb-9e3d-a8443d2542b7.png"></p>
+
+kemudian pilih ip Microsoft FTP Service untuk mencari objek apa yang didownload menggunakan ```RETR``` , akan keluar hasil :
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96358811-a2f77f80-1135-11eb-82de-fbfe7fb65071.png"></p>
+
+
 **9. Cari username dan password ketika login FTP pada localhost!**
 
 Menggunakan ```ftp&&ftp.command == USER || ftp.request.command == PASS```
