@@ -52,7 +52,6 @@ Menggunakan ```http.authbasic``` untuk menemukan paket dari web-web yang menggun
 Menggunakan ```ip.dst == 157.245.50.224 && http``` untuk mencari username dan password agar dapat mengakses web "aku.pengen.pw". Akan muncul paket-paket yang menuju ip tersebut :
 <p align="center"><img src="https://user-images.githubusercontent.com/62512432/96339973-30998780-10c2-11eb-948d-de7609b51c45.png"></p>
 
-
 lalu klik salah satu paket yang mengandung ```Authorization: Basic``` , karena web "aku.pengen.pw" merupakan basic authentication. Akan ditemukan pada bagian ```credentials``` yang berisikan ```username : kakakgamtenk``` dan ```password : hartatahtabermuda``` seperti gambar dibawah :
 <p align="center"><img src="https://user-images.githubusercontent.com/62512432/96340840-1f9d4600-10c3-11eb-8b88-63eb4a16e5a8.png"></p>
 
@@ -73,6 +72,12 @@ setelah mendapat password, file "Answer.zip" diekstrak dan buka file "Open This.
 **7. Ada 500 file zip yang disimpan ke FTP Server dengan nama 1.zip, 2.zip, ..., 500.zip. Salah satunya berisi pdf yang berisi puisi. Simpan dan Buka file pdf tersebut.
 Your Super Mega Ultra Rare Hint = nama pdf-nya "Yes.pdf"**
 
+Menggunakan ```ftp-data && frame contains "Yes.pdf"``` untuk mencari file .zip bernama "Yes.pdf", didapatkan hasil :
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96363077-3348bb00-115c-11eb-8b12-13c341aee33f.png"></p>
+
+bahwa file "Yes.pdf" ada pada folder "473.zip". Setelah itu, klik kanan salah satu paket, pilih ```Follow``` dan ```TCP stream```, ubah isi paket tsb dari ASCII menjadi raw, lalu ubah nama filenya menjadi "473.zip". Setelah itu, buka folder yang sudah disimpan, akan terlihat bahwa isi dari folder tsb adalah file "Yes.pdf". Berikut adalah isi dari file "Yes.pdf"
+<p align="center"><img src="https://user-images.githubusercontent.com/62512432/96363226-237da680-115d-11eb-8513-d745ba5ddc77.png"></p>
+
 **8. Cari objek apa saja yang didownload (RETR) dari koneksi FTP dengan Microsoft FTP Service!**
 
 Cari paket yang berasal dari koneksi FTP dengan Microsoft FTP Service menggunakan ```ftp contains "Microsoft"``` kemudian akan keluar hasil spt ini :
@@ -80,7 +85,6 @@ Cari paket yang berasal dari koneksi FTP dengan Microsoft FTP Service menggunaka
 
 kemudian pilih ip Microsoft FTP Service untuk mencari objek apa yang didownload menggunakan ```RETR``` , akan keluar hasil :
 <p align="center"><img src="https://user-images.githubusercontent.com/62512432/96358811-a2f77f80-1135-11eb-82de-fbfe7fb65071.png"></p>
-
 
 **9. Cari username dan password ketika login FTP pada localhost!**
 
@@ -103,9 +107,18 @@ kemudian pilih salah satu paket, klik kanan, pilih ```Follow``` kemudian pilih `
 
 **11. Filter sehingga wireshark hanya mengambil paket yang mengandung port 21!**
 
+Dapat dicari dengan menuliskan ```port 21``` pada halaman awal wireshark, kemudian dihubungkan dengan filezilla server dan filezilla client, didapat hasil sbg berikut :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96361078-ead5d100-114c-11eb-81d6-83ed645e56c6.png"></p>
+
 **12. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 80!**
 
+Dapat dicari dengan menuliskan ```src port 80``` pada halaman awal wireshark untuk menangkap semua paket yang berasal dari port 80, didapat hasil sbg berikut :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96363583-8d974b00-115f-11eb-80ba-a1e59479f8f1.png"></p>
+
 **13. Filter sehingga wireshark hanya menampilkan paket yang menuju port 443!**
+
+Dapat dicari dengan menuliskan ```dst port 443``` pada halaman awal wireshark untuk menangkap semua paket yang menuju ke port 443, didapat hasil sbg berikut :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96363626-c33c3400-115f-11eb-83fe-d3421dc18445.png"></p>
 
 **14. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!**
 
