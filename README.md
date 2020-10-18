@@ -88,7 +88,8 @@ clue: "25 50 44 46"**
 Pertama, terdapat clue "25 50 44 46" yang merupakan ```hex value``` yang dapat dicari dengan ```CTRL+F``` search ```hex value 25 50 44 46```
 <p align="center"><img src="https://user-images.githubusercontent.com/62512432/96347700-a48d5d00-10cd-11eb-92e6-9dbd85d4eed5.png"></p>
 
-
+kemudian pilih salah satu paket, klik kanan, pilih ```Follow``` kemudian pilih ```TCP stream```, ubah menjadi raw kemudian save as pdf. Apabila file pdf tersebut dibuka, maka akan berisi :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96358034-06c97a80-112d-11eb-8ec6-b6e27742d3bb.png"></p>
 
 
 **B. CAPTURE FILTER**
@@ -101,4 +102,16 @@ Pertama, terdapat clue "25 50 44 46" yang merupakan ```hex value``` yang dapat d
 
 **14. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!**
 
+Cari ip laptop menggunakan command prompt dengan ```ipconfig```, didapat hasilnya :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96358087-8f481b00-112d-11eb-904b-623071d821a3.png"></p>
+
+lalu gunakan ```ip.src == 192.168.100.40```, didapatkan hasil sbg berikut :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96358127-ee0d9480-112d-11eb-84bc-dd79479a2dc4.png"></p>
+
 **15. Filter sehingga wireshark hanya mengambil paket yang tujuannya ke monta.if.its.ac.id!**
+
+Cari ip monta.if.its.ac.id menggunakan command prompt dengan ```ping monta.if.its.ac.id```, didapat hasilnya :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96358163-375de400-112e-11eb-9b05-0a9226912a4c.png"></p>
+
+lalu gunakan ```ip.dst == 103.94.190.11```, didapatkan hasil sbg berikut :
+<p align ="center"><img src="https://user-images.githubusercontent.com/62512432/96358196-a8050080-112e-11eb-9f36-bd6f2c7e7475.png"></p>
